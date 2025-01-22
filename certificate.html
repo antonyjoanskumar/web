@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Certificate</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+        .certificate { border: 2px solid black; padding: 20px; width: 50%; margin: auto; text-align: center; }
+        .btn { padding: 8px 15px; background: blue; color: white; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Quiz</a> | 
+        <a href="certificate.html">Certificate</a> 
+    </nav>
+
+    <h1>Certificate of Completion</h1>
+    <div class="certificate">
+        <h2>Congratulations!</h2>
+        <p>You have successfully completed the quiz.</p>
+        <p>Enter your name to generate the certificate:</p>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button class="btn" onclick="generateCertificate()">Generate</button>
+        <h3 id="certName"></h3>
+    </div>
+
+    <script>
+        function generateCertificate() {
+            let userName = document.getElementById("name").value;
+            if (userName) {
+                document.getElementById("certName").innerHTML = "Certificate awarded to: " + userName;
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+        .btn { padding: 8px 15px; background: green; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Simple Quiz</h1>
+
+    <p>What is the capital of France?</p>
+
+    <button class="btn" onclick="checkAnswer('Paris')">Paris</button>
+    <button class="btn" onclick="checkAnswer('London')">London</button>
+    <button class="btn" onclick="checkAnswer('Berlin')">Berlin</button>
+
+    <p id="result"></p>
+    <hr>
+    <h4>Developed by: Your Name</h1>
+    <hr>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === "Paris") {
+                document.getElementById("result").innerHTML = "Correct!<br><a href='certificate.html'>Click here to get your certificate</a>";
+            } else {
+                document.getElementById("result").innerHTML = "Wrong answer. Try again!";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
